@@ -3,86 +3,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <section>
-        <table>
-            <tr>
-                <td>
-                    <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project90787SC00096-HDR.JPG" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project24631SC00107-HDR.JPG" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project23078006.jpg" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://founterior.com/wp-content/uploads/2020/04/small-bathroom.jpg" width="450" height="250">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo9a724kIMAN6uuNV_2wzEng4MtXL4S4YIeQ&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0a7CQ8P0ParVzGwiKWnUFhXTJTZmekcx3Ov15MXEx3xJeEJ_kWmcHu7gcLghBOLxYqw&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8k6XcSe6HJfFJekuwjsFv5fr9KamqVsI7w&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" width="450" height="250">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="https://images.livspace-cdn.com/plain/https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/12/29135353/Cover-01.png" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo9a724kIMAN6uuNV_2wzEng4MtXL4S4YIeQ&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0a7CQ8P0ParVzGwiKWnUFhXTJTZmekcx3Ov15MXEx3xJeEJ_kWmcHu7gcLghBOLxYqw&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8k6XcSe6HJfFJekuwjsFv5fr9KamqVsI7w&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" width="450" height="250">
-                </td>
-
-            </tr>
-
-            <tr>
-                <td>
-                    <img src="https://images.livspace-cdn.com/plain/https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/12/29135353/Cover-01.png" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo9a724kIMAN6uuNV_2wzEng4MtXL4S4YIeQ&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0a7CQ8P0ParVzGwiKWnUFhXTJTZmekcx3Ov15MXEx3xJeEJ_kWmcHu7gcLghBOLxYqw&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8k6XcSe6HJfFJekuwjsFv5fr9KamqVsI7w&usqp=CAU" width="450" height="250">
-                </td>
-                <td>
-                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" width="450" height="250">
-                </td>
-
-            </tr>
-        </table>
-    </section>
+    <title>Responsive Image Gallery</title>
     
+    <style>
+        /* Basic body styling for better visual */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+/* Container for the image gallery */
+.image-gallery {
+    display: grid;
+    /* This creates a responsive grid:
+       - repeat(auto-fit, minmax(250px, 1fr)) means:
+         - auto-fit: automatically adjust columns
+         - minmax(250px, 1fr): each column will be at least 250px wide,
+                                 and will take up equal space if more is available.
+    */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 15px; /* Space between grid items */
+    max-width: 1200px; /* Max width for the gallery */
+    margin: 0 auto; /* Center the gallery */
+    padding: 10px;
+}
+
+/* Styling for each individual image container */
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures image corners are rounded with the border-radius */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex; /* Helps in centering the image if it's smaller than its container */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Styling for the images themselves */
+.gallery-item img {
+    width: 100%; /* Make image take full width of its container */
+    height: 250px; /* Set a fixed height */
+    object-fit: cover; /* Crop images to cover the area without distortion */
+    display: block; /* Remove extra space below image */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.gallery-item img:hover {
+    transform: scale(1.03); /* Slightly zoom in on hover */
+}
+
+/* Media queries for different screen sizes (optional, but good for fine-tuning) */
+
+/* For screens smaller than 768px (e.g., tablets) */
+@media (max-width: 768px) {
+    .image-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Slightly smaller min-width */
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 200px; /* Adjust height for smaller screens */
+    }
+}
+
+/* For screens smaller than 480px (e.g., mobile phones) */
+@media (max-width: 480px) {
+    .image-gallery {
+        grid-template-columns: 1fr; /* Stack images in a single column */
+        gap: 8px;
+        padding: 5px;
+    }
+
+    .gallery-item img {
+        height: 180px; /* Further adjust height for mobile */
+    }
+}
+    </style>
+</head>
+<body>
+    <section class="image-gallery-section">
+        <div class="image-gallery">
+            <div class="gallery-item">
+                <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project90787SC00096-HDR.JPG" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project24631SC00107-HDR.JPG" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.kamsdesigner.com/AdminImages/ProjectImg/Project23078006.jpg" alt="Gallery Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://founterior.com/wp-content/uploads/2020/04/small-bathroom.jpg" alt="Gallery Image 4">
+            </div>
+           
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0a7CQ8P0ParVzGwiKWnUFhXTJTZmekcx3Ov15MXEx3xJeEJ_kWmcHu7gcLghBOLxYqw&usqp=CAU" alt="Gallery Image 6">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8k6XcSe6HJfFJekuwjsFv5fr9KamqVsI7w&usqp=CAU" alt="Gallery Image 7">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" alt="Gallery Image 8">
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.livspace-cdn.com/plain/https://jumanji.livspace-cdn.com/magazine/wp-content/uploads/sites/2/2021/12/29135353/Cover-01.png" alt="Gallery Image 9">
+            </div>
+            
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn0a7CQ8P0ParVzGwiKWnUFhXTJTZmekcx3Ov15MXEx3xJeEJ_kWmcHu7gcLghBOLxYqw&usqp=CAU" alt="Gallery Image 11">
+            </div>
+            <div class="gallery-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRF8k6XcSe6HJfFJekuwjsFv5fr9KamqVsI7w&usqp=CAU" alt="Gallery Image 12">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" alt="Gallery Image 13">
+            </div>
+            <div class="gallery-item">
+                <img src="https://img1.exportersindia.com/product_images/bc-full/dir_111/3321273/corporate-office-interior-designing-services-1522307.jpg" alt="Gallery Image 13">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
